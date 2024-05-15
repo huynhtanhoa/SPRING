@@ -1,0 +1,5 @@
+1. go with easy problems
+2. spend 45 mins for 1 problem
+3. look at 3 first solutions in discussion.
+4. code it.
+5. overconfidence
