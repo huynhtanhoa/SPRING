@@ -1,12 +1,13 @@
 package com.example.managingtransactions;
-
-import org.slf4j.LoggerFactory;
-import org.slf4j.Logger;
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.transaction.annotation.Transactional;
-
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
+
+@Component
 public class BookingService {
 
     private final static Logger logger = LoggerFactory.getLogger(BookingService.class);
@@ -29,7 +30,5 @@ public class BookingService {
         return jdbcTemplate.query("select FIRST_NAME from BOOKINGS",
                 (rs, rowNum) -> rs.getString("FIRST_NAME"));
     }
-
-
 
 }
